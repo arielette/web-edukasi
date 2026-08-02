@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KodeDasar adalah website edukasi untuk belajar HTML dan CSS dari nol.">
+  <title>KodeDasar - Belajar HTML &amp; CSS dari Nol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Kode<span>Dasar</span></a>
+      <button class="tombol-menu" id="tombolMenu">&#9776;</button>
+      <nav id="menuUtama">
+        <ul>
+          <li><a href="index.html" class="aktif">Beranda</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kuis.html">Kuis</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Bagian pembuka -->
+    <section class="hero">
+      <div class="container hero-isi">
+        <div class="hero-teks">
+          <span class="label">Materi Pemrograman Web I</span>
+          <h1>Belajar HTML &amp; CSS dari nol, tanpa bingung</h1>
+          <p>
+            <strong>KodeDasar</strong> adalah website edukasi yang merangkum dasar-dasar pembuatan
+            halaman web. Semua materi disusun berurutan mulai dari <em>struktur dokumen</em> sampai
+            <em>tata letak halaman</em>, lengkap dengan contoh kode yang bisa langsung dicoba.
+          </p>
+          <a href="materi.html" class="tombol">Mulai belajar</a>
+          <a href="kuis.html" class="tombol tombol-garis">Kerjakan kuis</a>
+        </div>
+        <div class="hero-gambar">
+          <img src="img/hero-editor.jpg" alt="Contoh kode HTML sederhana di dalam text editor">
+        </div>
+      </div>
+    </section>
+
+    <!-- Tiga alasan belajar web -->
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Kenapa harus belajar HTML dan CSS?</h2>
+          <p>Keduanya adalah fondasi dari semua halaman web yang kamu buka setiap hari.</p>
+        </div>
+
+        <div class="grid-kartu">
+          <article class="kartu">
+            <span class="nomor">1</span>
+            <h3>Fondasi semua website</h3>
+            <p>
+              Sekompleks apa pun sebuah aplikasi web, yang ditampilkan browser tetap
+              HTML dan CSS. Menguasai keduanya membuat materi lanjutan jadi lebih mudah dipahami.
+            </p>
+          </article>
+
+          <article class="kartu">
+            <span class="nomor">2</span>
+            <h3>Bisa dicoba tanpa alat mahal</h3>
+            <p>
+              Cukup <mark>text editor</mark> dan browser. Tidak perlu instalasi rumit,
+              tidak perlu server, dan hasilnya bisa langsung dilihat begitu file disimpan.
+            </p>
+          </article>
+
+          <article class="kartu">
+            <span class="nomor">3</span>
+            <h3>Langsung punya karya</h3>
+            <p>
+              Setelah paham dasarnya, kamu sudah bisa membuat portofolio, halaman profil,
+              atau <em>landing page</em> sendiri dan mengunggahnya ke internet.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Urutan belajar -->
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Urutan belajar yang kami sarankan</h2>
+          <p>Ikuti dari atas ke bawah supaya tidak ada konsep yang terlewat.</p>
+        </div>
+
+        <div class="alur">
+          <ol>
+            <li>
+              <strong>Struktur dokumen HTML.</strong> Kenali kerangka wajib sebuah halaman:
+              <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>,
+              <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>.
+            </li>
+            <li>
+              <strong>Teks dan pemformatan.</strong> Menulis judul, paragraf, penebalan,
+              miring, serta penandaan teks penting.
+            </li>
+            <li>
+              <strong>Link, gambar, list, dan tabel.</strong> Menghubungkan antarhalaman dan
+              menyajikan data supaya rapi dibaca.
+            </li>
+            <li>
+              <strong>Form dan input.</strong> Membuat isian yang biasa dipakai pada halaman
+              pendaftaran, kontak, maupun kuis.
+            </li>
+            <li>
+              <strong>Media.</strong> Menyisipkan video dan audio langsung di halaman web.
+            </li>
+            <li>
+              <strong>Dasar CSS.</strong> Selector, warna, jarak, sampai tata letak yang
+              menyesuaikan ukuran layar.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materi pilihan -->
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Materi pilihan</h2>
+          <p>Tiga topik yang paling sering ditanyakan pemula.</p>
+        </div>
+
+        <div class="grid-kartu">
+          <article class="kartu">
+            <h3>Tag semantik</h3>
+            <p>
+              Perbedaan <code>&lt;div&gt;</code> dengan <code>&lt;section&gt;</code>,
+              <code>&lt;article&gt;</code>, dan <code>&lt;nav&gt;</code>, serta kapan
+              sebaiknya masing-masing dipakai.
+            </p>
+            <p><a href="materi.html">Buka materi</a></p>
+          </article>
+
+          <article class="kartu">
+            <h3>Form dan input</h3>
+            <p>
+              Jenis-jenis input yang tersedia, mulai dari teks, pilihan ganda,
+              kotak centang, sampai daftar pilihan.
+            </p>
+            <p><a href="materi.html">Buka materi</a></p>
+          </article>
+
+          <article class="kartu">
+            <h3>Selector CSS</h3>
+            <p>
+              Cara memilih elemen yang ingin diberi gaya menggunakan selector tag,
+              class, dan id beserta contoh penerapannya.
+            </p>
+            <p><a href="materi.html">Buka materi</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ajakan menuju halaman kuis -->
+    <section>
+      <div class="container">
+        <div class="ajakan">
+          <h2>Sudah baca materinya? Uji pemahamanmu.</h2>
+          <p>Kuis singkat berisi 5 pertanyaan seputar HTML dan CSS dasar, hasilnya keluar langsung.</p>
+          <a href="kuis.html" class="tombol">Kerjakan kuis sekarang</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <div class="footer-kolom">
+          <h4>KodeDasar</h4>
+          <p>Website edukasi dasar HTML dan CSS.<br>Dibuat sebagai proyek mata kuliah Pemrograman Web I.</p>
+        </div>
+        <div class="footer-kolom">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-kolom">
+          <h4>Referensi</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/id/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="hak-cipta">&copy; <span id="tahun">2026</span> KodeDasar &mdash; Universitas Siber Asia</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil kelompok pembuat website KodeDasar dan formulir saran.">
+  <title>Tentang - KodeDasar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Kode<span>Dasar</span></a>
+      <button class="tombol-menu" id="tombolMenu">&#9776;</button>
+      <nav id="menuUtama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kuis.html">Kuis</a></li>
+          <li><a href="tentang.html" class="aktif">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h1>Tentang KodeDasar</h1>
+          <p>
+            Website ini dibuat sebagai proyek akhir mata kuliah (UTS) <strong>Pemrograman Web I</strong>,
+            Program Studi Teknik Informatika, Universitas Siber Asia.
+          </p>
+        </div>
+
+        <div class="alur">
+          <h3>Latar belakang</h3>
+          <p>
+            Banyak pemula berhenti belajar web bukan karena materinya sulit, melainkan karena
+            penjelasan yang tersebar di banyak tempat dan memakai istilah yang membingungkan.
+            KodeDasar dibuat untuk merapikan hal itu: satu tempat berisi materi dasar HTML dan CSS
+            yang disusun berurutan, memakai bahasa sehari-hari, dan disertai contoh kode yang
+            bisa langsung dicoba.
+          </p>
+          <p style="margin-top: 14px;">
+            Seluruh halaman dibangun memakai HTML, CSS buatan sendiri, dan JavaScript tanpa
+            <em>framework</em> maupun basis data, sehingga semua kode yang berjalan di sini
+            adalah hasil pengerjaan kelompok.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profil anggota. Ganti nama, NIM, dan foto sesuai anggota kelompok masing-masing. -->
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Anggota kelompok</h2>
+          <p>Empat orang dengan peran yang berbeda dalam pembuatan website ini.</p>
+        </div>
+
+        <div class="grid-anggota">
+
+          <article class="anggota">
+            <img src="img/anggota-1.jpg" alt="Foto anggota kelompok pertama">
+            <h3>Nama Anggota 1</h3>
+            <p class="peran">UI/UX &amp; CSS</p>
+            <p>Menyusun wireframe, memilih warna dan huruf, serta menulis seluruh berkas CSS.</p>
+          </article>
+
+          <article class="anggota">
+            <img src="img/anggota-2.jpg" alt="Foto anggota kelompok kedua">
+            <h3>Nama Anggota 2</h3>
+            <p class="peran">Struktur HTML</p>
+            <p>Membangun kerangka semantik halaman beranda dan materi beserta isinya.</p>
+          </article>
+
+          <article class="anggota">
+            <img src="img/anggota-3.jpg" alt="Foto anggota kelompok ketiga">
+            <h3>Nama Anggota 3</h3>
+            <p class="peran">JavaScript</p>
+            <p>Membuat pencarian materi, penyaring galeri, dan penilaian kuis otomatis.</p>
+          </article>
+
+          <article class="anggota">
+            <img src="img/anggota-4.jpg" alt="Foto anggota kelompok keempat">
+            <h3>Nama Anggota 4</h3>
+            <p class="peran">Uji Coba &amp; Unggah</p>
+            <p>Menguji seluruh fungsi di beberapa perangkat lalu mengunggah website ke hosting.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Pembagian tugas</h2>
+          <p>Rincian pekerjaan setiap anggota selama proyek berlangsung.</p>
+        </div>
+
+        <div class="bungkus-tabel">
+          <table>
+            <caption>Tabel 2. Pembagian tugas anggota kelompok.</caption>
+            <thead>
+              <tr>
+                <th>Anggota</th>
+                <th>Peran</th>
+                <th>Bagian yang dikerjakan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anggota 1</td>
+                <td>UI/UX &amp; CSS</td>
+                <td>Wireframe, palet warna, <code>style.css</code>, tampilan layar kecil</td>
+              </tr>
+              <tr>
+                <td>Anggota 2</td>
+                <td>Struktur HTML</td>
+                <td><code>index.html</code>, <code>materi.html</code>, penulisan isi materi</td>
+              </tr>
+              <tr>
+                <td>Anggota 3</td>
+                <td>JavaScript</td>
+                <td><code>materi.js</code>, <code>galeri.js</code>, <code>kuis.js</code>, <code>main.js</code></td>
+              </tr>
+              <tr>
+                <td>Anggota 4</td>
+                <td>Uji coba &amp; unggah</td>
+                <td><code>tentang.html</code>, pengujian, unggah ke hosting, dokumentasi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Kirim saran</h2>
+          <p>Ada materi yang kurang jelas atau ingin diusulkan? Tulis di bawah ini.</p>
+        </div>
+
+        <p class="pesan-form" id="pesanKirim"></p>
+
+        <!-- novalidate dipakai supaya pemeriksaan isian ditangani oleh kontak.js,
+             bukan oleh pesan bawaan browser -->
+        <form class="form-box" id="formSaran" novalidate>
+
+          <div class="grup-form">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama kamu">
+          </div>
+
+          <div class="grup-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com">
+          </div>
+
+          <div class="grup-form">
+            <label for="topik">Materi yang ingin dibahas</label>
+            <select id="topik" name="topik">
+              <option value="">-- Pilih topik --</option>
+              <option value="html">Dasar HTML</option>
+              <option value="form">Form dan input</option>
+              <option value="media">Video dan audio</option>
+              <option value="css">CSS dan tata letak</option>
+              <option value="lainnya">Topik lainnya</option>
+            </select>
+          </div>
+
+          <div class="grup-form">
+            <label for="saran">Isi saran</label>
+            <textarea id="saran" name="saran" placeholder="Tulis saran atau pertanyaan kamu di sini"></textarea>
+          </div>
+
+          <div class="grup-form pilihan">
+            <label>
+              <input type="checkbox" id="setuju" name="setuju">
+              Saya bersedia dihubungi kembali lewat email
+            </label>
+          </div>
+
+          <button type="submit" class="tombol">Kirim saran</button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <div class="footer-kolom">
+          <h4>KodeDasar</h4>
+          <p>Website edukasi dasar HTML dan CSS.<br>Dibuat sebagai proyek mata kuliah Pemrograman Web I.</p>
+        </div>
+        <div class="footer-kolom">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-kolom">
+          <h4>Referensi</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/id/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="hak-cipta">&copy; <span id="tahun">2026</span> KodeDasar &mdash; Universitas Siber Asia</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/kontak.js"></script>
+</body>
+</html>

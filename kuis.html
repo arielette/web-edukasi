@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuis singkat untuk menguji pemahaman dasar HTML dan CSS.">
+  <title>Kuis - KodeDasar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Kode<span>Dasar</span></a>
+      <button class="tombol-menu" id="tombolMenu">&#9776;</button>
+      <nav id="menuUtama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kuis.html" class="aktif">Kuis</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h1>Kuis HTML &amp; CSS</h1>
+          <p>
+            Lima pertanyaan singkat seputar materi dasar. Jawaban diperiksa langsung di halaman ini
+            tanpa perlu berpindah halaman.
+          </p>
+        </div>
+
+        <!-- Kotak hasil, awalnya disembunyikan lewat CSS lalu dimunculkan oleh kuis.js -->
+        <div class="hasil-kuis" id="kotakHasil">
+          <h3>Hasil kuis kamu</h3>
+          <p class="skor" id="nilaiSkor">0</p>
+          <p id="keteranganHasil"></p>
+          <ul id="rincianJawaban"></ul>
+        </div>
+
+        <p class="pesan-form pesan-error" id="pesanPeringatan"></p>
+
+        <form class="form-box" id="formKuis">
+
+          <div class="grup-form">
+            <label for="namaPeserta">Nama kamu</label>
+            <input type="text" id="namaPeserta" name="namaPeserta" placeholder="Tulis nama lengkap">
+            <p class="bantuan">Nama hanya dipakai untuk menampilkan hasil, tidak dikirim ke mana pun.</p>
+          </div>
+
+          <fieldset>
+            <legend>1. Tag apa yang dipakai untuk judul paling utama pada halaman?</legend>
+            <div class="pilihan">
+              <label><input type="radio" name="soal1" value="h1"> &lt;h1&gt;</label>
+              <label><input type="radio" name="soal1" value="head"> &lt;head&gt;</label>
+              <label><input type="radio" name="soal1" value="title"> &lt;title&gt;</label>
+              <label><input type="radio" name="soal1" value="header"> &lt;header&gt;</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Atribut apa yang menentukan alamat tujuan sebuah tautan?</legend>
+            <div class="pilihan">
+              <label><input type="radio" name="soal2" value="src"> src</label>
+              <label><input type="radio" name="soal2" value="href"> href</label>
+              <label><input type="radio" name="soal2" value="link"> link</label>
+              <label><input type="radio" name="soal2" value="target"> target</label>
+            </div>
+          </fieldset>
+
+          <div class="grup-form">
+            <label for="soal3">3. Tag apa yang dipakai untuk membuat daftar berurutan?</label>
+            <select id="soal3" name="soal3">
+              <option value="">-- Pilih jawaban --</option>
+              <option value="ul">&lt;ul&gt;</option>
+              <option value="ol">&lt;ol&gt;</option>
+              <option value="li">&lt;li&gt;</option>
+              <option value="dl">&lt;dl&gt;</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>4. Mana saja yang termasuk tag semantik? (boleh lebih dari satu)</legend>
+            <div class="pilihan">
+              <label><input type="checkbox" name="soal4" value="header"> &lt;header&gt;</label>
+              <label><input type="checkbox" name="soal4" value="div"> &lt;div&gt;</label>
+              <label><input type="checkbox" name="soal4" value="article"> &lt;article&gt;</label>
+              <label><input type="checkbox" name="soal4" value="span"> &lt;span&gt;</label>
+              <label><input type="checkbox" name="soal4" value="footer"> &lt;footer&gt;</label>
+            </div>
+          </fieldset>
+
+          <div class="grup-form">
+            <label for="soal5">5. Tanda apa yang ditulis di depan nama selector class pada CSS?</label>
+            <input type="text" id="soal5" name="soal5" placeholder="Tulis tandanya saja">
+            <p class="bantuan">Cukup tulis satu karakter, misalnya tanda yang dipakai untuk id adalah #.</p>
+          </div>
+
+          <button type="submit" class="tombol">Periksa jawaban</button>
+          <button type="reset" class="tombol tombol-garis" id="tombolUlang">Ulangi</button>
+
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Belum yakin dengan jawabanmu?</h2>
+          <p>Semua pertanyaan di atas jawabannya ada di halaman materi.</p>
+        </div>
+        <p style="text-align: center;">
+          <a href="materi.html" class="tombol">Baca ulang materi</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <div class="footer-kolom">
+          <h4>KodeDasar</h4>
+          <p>Website edukasi dasar HTML dan CSS.<br>Dibuat sebagai proyek mata kuliah Pemrograman Web I.</p>
+        </div>
+        <div class="footer-kolom">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-kolom">
+          <h4>Referensi</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/id/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="hak-cipta">&copy; <span id="tahun">2026</span> KodeDasar &mdash; Universitas Siber Asia</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/kuis.js"></script>
+</body>
+</html>

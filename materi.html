@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kumpulan materi dan referensi tag HTML beserta contoh kodenya.">
+  <title>Materi - KodeDasar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Kode<span>Dasar</span></a>
+      <button class="tombol-menu" id="tombolMenu">&#9776;</button>
+      <nav id="menuUtama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="materi.html" class="aktif">Materi</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kuis.html">Kuis</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h1>Referensi tag HTML</h1>
+          <p>
+            Kumpulan tag yang paling sering dipakai beserta contoh penulisannya.
+            Ketik nama tag di kotak pencarian untuk menyaring daftar di bawah.
+          </p>
+        </div>
+
+        <!-- Kotak pencarian, isinya disaring oleh materi.js -->
+        <div class="kotak-cari">
+          <input type="text" id="inputCari" placeholder="Cari tag, misalnya: form, tabel, gambar">
+        </div>
+
+        <div id="daftarTag">
+
+          <article class="kartu-tag" data-nama="heading judul h1 h2 h3">
+            <span class="kategori">Teks</span>
+            <h3>&lt;h1&gt; sampai &lt;h6&gt;</h3>
+            <p>
+              Menandai judul dan subjudul. <code>&lt;h1&gt;</code> adalah tingkat tertinggi dan
+              sebaiknya hanya dipakai satu kali per halaman, lalu turun berurutan ke bawah.
+            </p>
+            <pre><code>&lt;h1&gt;Judul Halaman&lt;/h1&gt;
+&lt;h2&gt;Subjudul&lt;/h2&gt;
+&lt;h3&gt;Bagian yang lebih kecil&lt;/h3&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="paragraf paragraph p teks">
+            <span class="kategori">Teks</span>
+            <h3>&lt;p&gt;</h3>
+            <p>
+              Membungkus satu paragraf. Browser otomatis memberi jarak antarparagraf,
+              jadi tidak perlu menambahkan baris kosong secara manual.
+            </p>
+            <pre><code>&lt;p&gt;Halaman web dibangun dari elemen-elemen HTML.&lt;/p&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="format teks strong em mark small tebal miring">
+            <span class="kategori">Teks</span>
+            <h3>&lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;, &lt;small&gt;</h3>
+            <p>
+              Memberi penekanan pada teks. <code>&lt;strong&gt;</code> untuk hal penting,
+              <code>&lt;em&gt;</code> untuk penekanan lisan, <code>&lt;mark&gt;</code> untuk
+              menyorot, dan <code>&lt;small&gt;</code> untuk keterangan tambahan.
+            </p>
+            <pre><code>&lt;p&gt;Simpan file dengan ekstensi &lt;strong&gt;.html&lt;/strong&gt;,
+bukan &lt;em&gt;.txt&lt;/em&gt;.&lt;/p&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="link tautan a href anchor">
+            <span class="kategori">Navigasi</span>
+            <h3>&lt;a&gt;</h3>
+            <p>
+              Membuat tautan ke halaman lain, ke bagian tertentu dalam halaman yang sama,
+              atau ke alamat email. Tujuan tautan ditulis pada atribut <code>href</code>.
+            </p>
+            <pre><code>&lt;a href="materi.html"&gt;Buka materi&lt;/a&gt;
+&lt;a href="https://unsia.ac.id" target="_blank"&gt;Situs kampus&lt;/a&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="gambar image img foto">
+            <span class="kategori">Media</span>
+            <h3>&lt;img&gt;</h3>
+            <p>
+              Menampilkan gambar. Atribut <code>alt</code> wajib diisi sebagai keterangan
+              apabila gambar gagal dimuat sekaligus membantu pembaca layar.
+            </p>
+            <pre><code>&lt;img src="img/logo.png" alt="Logo KodeDasar"&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="list daftar ul ol li urutan">
+            <span class="kategori">Daftar</span>
+            <h3>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h3>
+            <p>
+              Membuat daftar. Gunakan <code>&lt;ul&gt;</code> bila urutan tidak penting dan
+              <code>&lt;ol&gt;</code> bila urutannya bermakna, misalnya langkah-langkah.
+            </p>
+            <pre><code>&lt;ol&gt;
+  &lt;li&gt;Buat file index.html&lt;/li&gt;
+  &lt;li&gt;Tulis kerangka HTML&lt;/li&gt;
+  &lt;li&gt;Buka lewat browser&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="tabel table tr td th data">
+            <span class="kategori">Tabel</span>
+            <h3>&lt;table&gt;</h3>
+            <p>
+              Menyajikan data dalam baris dan kolom. Baris ditulis dengan <code>&lt;tr&gt;</code>,
+              judul kolom dengan <code>&lt;th&gt;</code>, dan isi sel dengan <code>&lt;td&gt;</code>.
+            </p>
+            <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Nama&lt;/th&gt;&lt;th&gt;Nilai&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Rina&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="form input isian pendaftaran">
+            <span class="kategori">Form</span>
+            <h3>&lt;form&gt; dan &lt;input&gt;</h3>
+            <p>
+              Menampung isian dari pengunjung. Jenis isian ditentukan lewat atribut
+              <code>type</code>, misalnya <code>text</code>, <code>email</code>,
+              <code>radio</code>, atau <code>checkbox</code>.
+            </p>
+            <pre><code>&lt;form&gt;
+  &lt;label for="nama"&gt;Nama&lt;/label&gt;
+  &lt;input type="text" id="nama" name="nama"&gt;
+  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="select option pilihan dropdown textarea">
+            <span class="kategori">Form</span>
+            <h3>&lt;select&gt; dan &lt;textarea&gt;</h3>
+            <p>
+              <code>&lt;select&gt;</code> menampilkan daftar pilihan yang dapat dibuka,
+              sedangkan <code>&lt;textarea&gt;</code> dipakai untuk isian panjang beberapa baris.
+            </p>
+            <pre><code>&lt;select name="tingkat"&gt;
+  &lt;option value="pemula"&gt;Pemula&lt;/option&gt;
+  &lt;option value="mahir"&gt;Mahir&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea name="pesan" rows="4"&gt;&lt;/textarea&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="semantik header nav main section article footer">
+            <span class="kategori">Semantik</span>
+            <h3>&lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;footer&gt;</h3>
+            <p>
+              Tag semantik menjelaskan makna bagian halaman, bukan sekadar wadah kosong seperti
+              <code>&lt;div&gt;</code>. Struktur jadi lebih mudah dibaca manusia maupun mesin pencari.
+            </p>
+            <pre><code>&lt;header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;...&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="video audio media suara">
+            <span class="kategori">Media</span>
+            <h3>&lt;video&gt; dan &lt;audio&gt;</h3>
+            <p>
+              Menyisipkan video dan suara tanpa bantuan program tambahan. Tambahkan atribut
+              <code>controls</code> supaya tombol putar dan pengatur volume ikut ditampilkan.
+            </p>
+            <pre><code>&lt;video src="media/intro.mp4" controls&gt;&lt;/video&gt;
+&lt;audio src="media/materi.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+          </article>
+
+          <article class="kartu-tag" data-nama="css style selector class id gaya">
+            <span class="kategori">CSS</span>
+            <h3>Selector CSS</h3>
+            <p>
+              Selector menentukan elemen mana yang akan diberi gaya. Selector tag memilih
+              berdasarkan nama tag, class diawali tanda titik, dan id diawali tanda pagar.
+            </p>
+            <pre><code>p        { color: #333; }
+.kartu   { padding: 20px; }
+#header  { background: #fff; }</code></pre>
+          </article>
+
+          <p class="pesan-kosong" id="pesanKosong" style="display: none;">
+            Tag yang dicari tidak ditemukan. Coba kata kunci lain.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabel referensi atribut -->
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Atribut yang sering dipakai</h2>
+          <p>Atribut ditulis di dalam tag pembuka untuk memberi keterangan tambahan.</p>
+        </div>
+
+        <div class="bungkus-tabel">
+          <table>
+            <caption>Tabel 1. Daftar atribut HTML yang umum digunakan.</caption>
+            <thead>
+              <tr>
+                <th>Atribut</th>
+                <th>Dipakai pada</th>
+                <th>Kegunaan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>href</code></td>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Menentukan alamat tujuan tautan.</td>
+              </tr>
+              <tr>
+                <td><code>src</code></td>
+                <td><code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></td>
+                <td>Menentukan lokasi berkas yang ditampilkan.</td>
+              </tr>
+              <tr>
+                <td><code>alt</code></td>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Teks pengganti bila gambar gagal dimuat.</td>
+              </tr>
+              <tr>
+                <td><code>class</code></td>
+                <td>Hampir semua elemen</td>
+                <td>Penanda kelompok elemen agar bisa diberi gaya lewat CSS.</td>
+              </tr>
+              <tr>
+                <td><code>id</code></td>
+                <td>Hampir semua elemen</td>
+                <td>Penanda unik, hanya boleh dipakai satu kali per halaman.</td>
+              </tr>
+              <tr>
+                <td><code>type</code></td>
+                <td><code>&lt;input&gt;</code>, <code>&lt;button&gt;</code></td>
+                <td>Menentukan jenis isian atau jenis tombol.</td>
+              </tr>
+              <tr>
+                <td><code>target</code></td>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Mengatur tautan dibuka di tab baru bila diisi <code>_blank</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <div class="footer-kolom">
+          <h4>KodeDasar</h4>
+          <p>Website edukasi dasar HTML dan CSS.<br>Dibuat sebagai proyek mata kuliah Pemrograman Web I.</p>
+        </div>
+        <div class="footer-kolom">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-kolom">
+          <h4>Referensi</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/id/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="hak-cipta">&copy; <span id="tahun">2026</span> KodeDasar &mdash; Universitas Siber Asia</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/materi.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galeri video, audio, dan ilustrasi materi HTML dan CSS.">
+  <title>Galeri - KodeDasar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-isi">
+      <a href="index.html" class="logo">Kode<span>Dasar</span></a>
+      <button class="tombol-menu" id="tombolMenu">&#9776;</button>
+      <nav id="menuUtama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="galeri.html" class="aktif">Galeri</a></li>
+          <li><a href="kuis.html">Kuis</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h1>Galeri media</h1>
+          <p>Kumpulan video, audio, dan ilustrasi pendukung materi yang ada di halaman ini.</p>
+        </div>
+
+        <div class="dua-kolom">
+
+          <div class="media-box">
+            <h3>Video pembuka materi</h3>
+            <video controls poster="img/poster-video.jpg" preload="metadata">
+              <source src="media/intro-html.mp4" type="video/mp4">
+              Browser yang kamu gunakan belum mendukung pemutar video.
+            </video>
+            <p>
+              Video singkat berisi pengantar sebelum masuk ke materi HTML dan CSS.
+              Ditampilkan memakai tag <code>&lt;video&gt;</code> dengan atribut <code>controls</code>.
+            </p>
+          </div>
+
+          <div class="media-box">
+            <h3>Video presentasi kelompok</h3>
+            <!-- link video youtube -->
+            <iframe src="https://www.youtube.com/embed/azY_k8tyu6Y"
+                    title="Video presentasi kelompok KodeDasar"
+                    allowfullscreen></iframe>
+            <p>
+              Ini hanya contoh aja temen2. Nanti kita ganti dengan link video presentasi PW1 "Gerombolan Siberat". Video presentasi ditampilkan dengan <code>&lt;iframe&gt;</code>, yaitu cara menyisipkan
+              halaman dari situs lain ke dalam halaman kita.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="media-box">
+          <h3>Audio penjelasan materi</h3>
+          <audio controls preload="metadata">
+            <source src="media/backsound.mp3" type="audio/mpeg">
+            Browser yang kamu gunakan belum mendukung pemutar audio.
+          </audio>
+          <p>
+            Rekaman suara pendukung materi, ditampilkan memakai tag <code>&lt;audio&gt;</code>.
+            Sama seperti video, atribut <code>controls</code> dipakai supaya tombol putar
+            dan pengatur volume ikut muncul.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="judul-bagian">
+          <h2>Ilustrasi materi</h2>
+          <p>Pilih kategori untuk menyaring gambar yang ditampilkan.</p>
+        </div>
+
+        <!-- Tombol filter, dijalankan oleh galeri.js -->
+        <div class="filter-galeri" id="filterGaleri">
+          <button class="aktif" data-filter="semua">Semua</button>
+          <button data-filter="html">HTML</button>
+          <button data-filter="form">Form &amp; Tabel</button>
+          <button data-filter="media">Media</button>
+          <button data-filter="css">CSS</button>
+        </div>
+
+        <div class="galeri" id="galeri">
+
+          <figure class="item-galeri" data-kategori="html">
+            <img src="img/galeri-struktur.jpg" alt="Ilustrasi struktur dasar dokumen HTML">
+            <figcaption>
+              <strong>Struktur dasar</strong>
+              Kerangka wajib sebuah halaman HTML.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="html">
+            <img src="img/galeri-semantik.jpg" alt="Ilustrasi penggunaan tag semantik">
+            <figcaption>
+              <strong>Tag semantik</strong>
+              Header, nav, section, article, dan footer.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="html">
+            <img src="img/galeri-teks.jpg" alt="Ilustrasi pemformatan teks pada HTML">
+            <figcaption>
+              <strong>Format teks</strong>
+              Penebalan, miring, dan penyorotan teks.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="form">
+            <img src="img/galeri-list.jpg" alt="Ilustrasi list dan tabel pada HTML">
+            <figcaption>
+              <strong>List &amp; tabel</strong>
+              Menyusun data supaya rapi dibaca.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="form">
+            <img src="img/galeri-form.jpg" alt="Ilustrasi form dan input pada HTML">
+            <figcaption>
+              <strong>Form input</strong>
+              Isian teks, pilihan ganda, dan kotak centang.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="media">
+            <img src="img/galeri-media.jpg" alt="Ilustrasi penyisipan media pada HTML">
+            <figcaption>
+              <strong>Media web</strong>
+              Menyisipkan video dan audio di halaman.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="css">
+            <img src="img/galeri-selector.jpg" alt="Ilustrasi selector pada CSS">
+            <figcaption>
+              <strong>Selector CSS</strong>
+              Memilih elemen berdasarkan tag, class, dan id.
+            </figcaption>
+          </figure>
+
+          <figure class="item-galeri" data-kategori="css">
+            <img src="img/galeri-boxmodel.jpg" alt="Ilustrasi box model pada CSS">
+            <figcaption>
+              <strong>Box model</strong>
+              Hubungan margin, border, padding, dan konten.
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-isi">
+        <div class="footer-kolom">
+          <h4>KodeDasar</h4>
+          <p>Website edukasi dasar HTML dan CSS.<br>Dibuat sebagai proyek mata kuliah Pemrograman Web I.</p>
+        </div>
+        <div class="footer-kolom">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kuis.html">Kuis</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-kolom">
+          <h4>Referensi</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/id/docs/Web/HTML" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="hak-cipta">&copy; <span id="tahun">2026</span> KodeDasar &mdash; Universitas Siber Asia</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/galeri.js"></script>
+</body>
+</html>
